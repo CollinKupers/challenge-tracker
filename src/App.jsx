@@ -175,7 +175,7 @@ export default function App() {
   if (loading) return (
     <div style={s.loading}>
       <div style={s.pulse} />
-      <p style={{ color: "#64748b", marginTop: 14, fontSize: 11, letterSpacing: "0.15em", fontFamily: "monospace" }}>SYNCING</p>
+      <p style={{ color: "#94a3b8", marginTop: 14, fontSize: 11, letterSpacing: "0.15em", fontFamily: "monospace" }}>SYNCING</p>
     </div>
   );
 
@@ -317,7 +317,7 @@ function HistoryView({ data, startDate }) {
         return (
           <div key={d} style={s.histRow}>
             <span style={{ ...s.hCell, flex: 0.5, color: "#94a3b8" }}>{n}</span>
-            <span style={{ ...s.hCell, flex: 0.8, color: "#64748b" }}>{new Date(d+"T12:00:00").toLocaleDateString([],{month:"short",day:"numeric"})}</span>
+            <span style={{ ...s.hCell, flex: 0.8, color: "#94a3b8" }}>{new Date(d+"T12:00:00").toLocaleDateString([],{month:"short",day:"numeric"})}</span>
             <span style={{ ...s.hBadge, flex: 1, background: dv?.completed ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.08)", color: dv?.completed ? "#22c55e" : "#ef4444" }}>{dv?.completed ? "✓" : "✗"}</span>
             <span style={{ ...s.hBadge, flex: 1, background: co?.completed ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.08)", color: co?.completed ? "#22c55e" : "#ef4444" }}>{co?.completed ? "✓" : "✗"}</span>
           </div>
@@ -344,26 +344,26 @@ function RulesView({ expandedRule, setExpandedRule }) {
           <div key={rule.id} style={{ ...s.rCard, ...(open ? s.rCardOpen : {}) }}>
             <button onClick={() => setExpandedRule(open ? null : rule.id)} style={s.rCardBtn}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ fontSize: 10, color: "#334155", fontWeight: 700, minWidth: 20 }}>{String(i+1).padStart(2,"0")}</span>
+                <span style={{ fontSize: 10, color: "#7e96b0", fontWeight: 700, minWidth: 20 }}>{String(i+1).padStart(2,"0")}</span>
                 <span style={{ fontSize: 18 }}>{rule.icon}</span>
                 <div style={{ textAlign: "left" }}>
                   <div style={{ fontSize: 13, color: "#e2e8f0", fontWeight: 700 }}>{rule.label}</div>
-                  <div style={{ fontSize: 10, color: "#475569", marginTop: 2 }}>{rule.sub}</div>
+                  <div style={{ fontSize: 10, color: "#94a3b8", marginTop: 2 }}>{rule.sub}</div>
                 </div>
               </div>
-              <span style={{ fontSize: 14, color: "#475569", transition: "transform 0.2s", display: "inline-block", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}>▾</span>
+              <span style={{ fontSize: 14, color: "#94a3b8", transition: "transform 0.2s", display: "inline-block", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}>▾</span>
             </button>
             {open && (
               <div style={s.rCardBody}>
                 <p style={{ margin: "14px 0 8px", fontSize: 12, color: "#94a3b8", lineHeight: 1.7, fontWeight: 600 }}>{rule.description}</p>
-                <p style={{ margin: 0, fontSize: 11, color: "#475569", lineHeight: 1.8 }}>{rule.detail}</p>
+                <p style={{ margin: 0, fontSize: 11, color: "#94a3b8", lineHeight: 1.8 }}>{rule.detail}</p>
               </div>
             )}
           </div>
         );
       })}
       <div style={s.rFooter}>
-        <p style={{ margin: 0, fontSize: 11, color: "#78716c", lineHeight: 1.7, fontStyle: "italic", textAlign: "center" }}>
+        <p style={{ margin: 0, fontSize: 11, color: "#94a3b8", lineHeight: 1.7, fontStyle: "italic", textAlign: "center" }}>
           The rules aren't the hard part. Showing up when you don't feel like it is. The rules just make it official.
         </p>
       </div>
@@ -434,10 +434,10 @@ const s = {
   overlay:     { position: "fixed", inset: 0, zIndex: 50, background: "rgba(0,0,0,0.75)", display: "flex", alignItems: "center", justifyContent: "center", padding: "0 20px" },
   modal:       { width: "100%", maxWidth: 380, background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "20px" },
   modalTitle:  { fontSize: 14, fontWeight: 700, color: "#f1f5f9", marginBottom: 14, letterSpacing: "0.04em" },
-  modalSub:    { color: "#64748b", fontWeight: 400 },
+  modalSub:    { color: "#94a3b8", fontWeight: 400 },
   textarea:    { width: "100%", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 10, color: "#e2e8f0", fontSize: 13, padding: "10px 12px", fontFamily: "'DM Mono',monospace", resize: "none", outline: "none", boxSizing: "border-box", lineHeight: 1.6 },
   modalBtns:   { display: "flex", gap: 8, marginTop: 12 },
-  cancelBtn:   { flex: 1, padding: "9px 0", borderRadius: 8, background: "transparent", border: "1px solid rgba(255,255,255,0.1)", color: "#64748b", fontSize: 12, cursor: "pointer", fontFamily: "'DM Mono',monospace" },
+  cancelBtn:   { flex: 1, padding: "9px 0", borderRadius: 8, background: "transparent", border: "1px solid rgba(255,255,255,0.1)", color: "#94a3b8", fontSize: 12, cursor: "pointer", fontFamily: "'DM Mono',monospace" },
   saveBtn:     { flex: 2, padding: "9px 0", borderRadius: 8, background: "rgba(14,165,233,0.2)", border: "1px solid rgba(14,165,233,0.4)", color: "#38bdf8", fontSize: 12, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Mono',monospace" },
   rulesView:   { position: "relative", zIndex: 1, padding: "0 14px 20px" },
   rulesIntro:  { margin: 0, fontSize: 12, color: "#94a3b8", lineHeight: 1.7, borderLeft: "2px solid rgba(14,165,233,0.4)", paddingLeft: 12 },
