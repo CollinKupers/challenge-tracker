@@ -372,7 +372,7 @@ function RulesView({ expandedRule, setExpandedRule }) {
 }
 
 const s = {
-  root:        { minHeight: "100vh", background: "#080d1a", color: "#e2e8f0", fontFamily: "'DM Mono','Courier New',monospace", position: "relative", paddingBottom: 52, overflowX: "hidden" },
+  root:        { minHeight: "100vh", background: "#080d1a", color: "#e2e8f0", fontFamily: "'DM Mono','Courier New',monospace", position: "relative", paddingBottom: 52, overflowX: "hidden", paddingTop: "env(safe-area-inset-top, 20px)" },
   bg:          { position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", backgroundImage: "radial-gradient(ellipse at 15% 40%, rgba(14,165,233,0.06) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(99,102,241,0.06) 0%, transparent 50%)" },
   loading:     { minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "#080d1a" },
   pulse:       { width: 10, height: 10, borderRadius: "50%", background: "#0ea5e9" },
