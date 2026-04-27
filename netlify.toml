@@ -1,12 +1,6 @@
 [build]
-  command   = "npm install && npm run build"
-  publish   = "dist"
-  functions = "netlify/functions"
-
-[[redirects]]
-  from   = "/api/store"
-  to     = "/.netlify/functions/store"
-  status = 200
+  command = "npm install && npm run build"
+  publish = "dist"
 
 [[redirects]]
   from   = "/*"
