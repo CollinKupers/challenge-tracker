@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "@netlify/blobs": "^8.1.0",
+    "firebase": "^12.12.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.3.0",
     "vite": "^5.4.2"
   }
 }
